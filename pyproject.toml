@@ -33,6 +33,11 @@ dev = [
   "pytest>=8.4.1",
 ]
 
+# Install with: uv sync --group build
+build = [
+  "pyinstaller>=6.11",
+]
+
 [tool.ruff]
 # Match project Python version
 target-version = "py312"

@@ -95,6 +95,24 @@ uv pip install -e .
    uv run advplate version
    ```
 
+### 📦 Build a Standalone Executable
+
+Prefer a single-file binary that bundles Python and the CLI together? Use PyInstaller:
+
+```bash
+# 1. Install build dependencies (one-time)
+uv sync --group build
+
+# 2. Run the helper script (creates dist/advplate)
+uv run python scripts/build_executable.py
+
+# 3. Launch the packaged CLI
+./dist/advplate --help
+```
+
+The resulting executable contains the same commands as `uv run advplate …`, so you can copy
+`dist/advplate` to another machine and run the dataset pipeline without installing Python.
+
 ### Python API
 
 ```python
